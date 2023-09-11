@@ -66,7 +66,7 @@ const Apps = (props: any) => {
 			<div className='mt-5 flex flex-col'>
 				{/* <input type='file' onChange={(e) => { const reader = new FileReader(); reader.addEventListener('load', () => { setImage(reader.result); }); reader.readAsDataURL(e.target.files[0]) }} id='Image' className='m-2 w-fit hidden' /> */}
 				<input type='text' value={title} onChange={(e) => { setTitle(e.target.value) }} id='PostHeading' className='m-2 w-fit bg-black text-white mx-5 rounded-lg p-2' placeholder='Title' />
-				<textarea type='text' value={content} onChange={(e) => { setContent(e.target.value) }} id='postdate' className='m-2 w-fit bg-black text-white mx-5 rounded-lg p-2' placeholder='Content'></textarea>
+				<textarea value={content} onChange={(e) => { setContent(e.target.value) }} id='postdate' className='m-2 w-fit bg-black text-white mx-5 rounded-lg p-2' placeholder='Content'></textarea>
 				<input type='text' value={link} onChange={(e) => { setLink(e.target.value) }} id='postdate' className='m-2 w-fit bg-black text-white mx-5 rounded-lg p-2' placeholder='Link' />
 				<input type='text' value={tags} onChange={(e) => { setTags(e.target.value) }} id='posttags' className='m-2 w-fit bg-black text-white mx-5 rounded-lg p-2' placeholder='Tags' />
 				{/* <label htmlFor='Image' className='bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-xl m-4 w-fit '>Upload Image</label> */}
@@ -78,7 +78,7 @@ const Apps = (props: any) => {
 			<div className='flex flex-col items-center justify-center'>
 				<h1 className='mx-2 my-2 text-3xl border-b-2 border-black w-fit'>Posts</h1>
 				<div id='latestPosts' >{
-					all.map((post) => {
+					all.map((post: any) => {
 						return <AppsItem key={post._id} id={post._id} image={post.image} title={post.title} content={post.content} date={post.date} />})
 				}</div>
 			</div>
@@ -86,7 +86,7 @@ const Apps = (props: any) => {
 	)
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context:any) {
 	const a = await fetch('https://tech-vave.vercel.app/api/admin', { method: "POST" })
 	const b = await a.json();
 	const c = await fetch('https://tech-vave.vercel.app/api/apps', { method: "GET" })

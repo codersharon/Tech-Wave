@@ -74,7 +74,7 @@ const Websites = (props: any) => {
 			<div className='flex flex-col items-center justify-center'>
 				<h1 className='mx-2 my-2 text-3xl border-b-2 border-black w-fit'>Posts</h1>
 				<div id='latestPosts' >{
-					all.map((post) => {
+					all.map((post: any) => {
 						return <WebsiteItem key={post._id} id={post._id} image={post.image} title={post.title} content={post.content} date={post.date} />
 					})
 				}</div>
@@ -83,7 +83,7 @@ const Websites = (props: any) => {
 	)
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
 	const a = await fetch('https://tech-vave.vercel.app/api/admin', { method: "POST" })
 	const b = await a.json();
 	const c = await fetch('https://tech-vave.vercel.app/api/website', { method: "GET" })

@@ -47,12 +47,12 @@ const Login = (props: any) => {
 		<div className="text-white bg-gray-900 shadow-md h-[91.2vh] p-8 flex flex-col">
 			<div className="relative mb-4">
 				<label htmlFor="username" className="leading-7 text-sm text-gray-400 flex flex-col items-start">Username</label>
-				<input vaule={id} onChange={(e) => { setId(e.target.value) }} type="username" id="username" name="username" className="w-fit bg-gray-800 rounded border border-gray-700 focus:border-red-500 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+				<input value={id} onChange={(e) => { setId(e.target.value) }} type="username" id="username" name="username" className="w-fit bg-gray-800 rounded border border-gray-700 focus:border-red-500 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
 			</div>
 
 			<div className="relative mb-4">
 				<label htmlFor="password" className="leading-7 text-sm text-gray-400 flex flex-col items-start">Password</label>
-				<input vaule={pass} onChange={(e) => { setPass(e.target.value) }} type="password" id="password" name="password" className="w-fit bg-gray-800 rounded border border-gray-700 focus:border-red-500 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+				<input value={pass} onChange={(e) => { setPass(e.target.value) }} type="password" id="password" name="password" className="w-fit bg-gray-800 rounded border border-gray-700 focus:border-red-500 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
 			</div>
 
 			<button onClick={handleSubmit} className="w-fit text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Login</button>
@@ -61,7 +61,7 @@ const Login = (props: any) => {
 	</>
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context: any) {
 	const a = await fetch('https://tech-vave.vercel.app/api/admin', { method: "POST" })
 	const data = await a.json();
 
