@@ -5,7 +5,7 @@ import HowToItem from "./comps/howtoitem1";
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 
-const HowTo = (props) => {
+const HowTo = (props: any) => {
 	const router = useRouter();
 	const [image, setImage] = useState("");
 	const [links, setLinks] = useState("");

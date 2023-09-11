@@ -5,7 +5,7 @@ import AppsItem from "./comps/appsitem1";
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 
-const Apps = (props) => {
+const Apps = (props: any) => {
 	const router = useRouter();
 	const [image, setImage] = useState("");
 	const [title, setTitle] = useState("");

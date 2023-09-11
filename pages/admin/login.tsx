@@ -5,7 +5,7 @@ import Link from "next/link"
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 
-const Login = (props) => {
+const Login = (props: any) => {
 	const router = useRouter();
 	const [id, setId] = useState("");
 	const [pass, setPass] = useState("");

@@ -6,7 +6,7 @@ import WebsiteItem from "./comps/websiteitem1";
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 
-const Websites = (props) => {
+const Websites = (props: any) => {
 	const router = useRouter();
 	const [title, setTitle] = useState("");
 	const [content, setContent] = useState("");
