@@ -12,7 +12,6 @@ import {
   createTheme,
   useMediaQuery,
 } from "@mui/material";
-import { blue, lime, purple, red } from "@mui/material/colors";
 import Footer from "./comps/footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
