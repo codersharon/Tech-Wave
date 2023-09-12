@@ -48,6 +48,9 @@ const Slug = (props) => {
           url: `https://tech-vave.vercel.app/blogpost/posts/${props.i}`,
           title: title,
           description: content.slice(0, 60),
+          images: {
+            url: "/favicon.ico",
+          },
         }}
       />
 

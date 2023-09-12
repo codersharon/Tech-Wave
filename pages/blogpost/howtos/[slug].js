@@ -47,7 +47,7 @@ const Slug = (props) => {
           title: title,
           description: content.slice(0, 60),
           images: {
-            url: "/favicon.jpeg",
+            url: "/favicon.ico",
           },
         }}
       />
