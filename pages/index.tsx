@@ -72,7 +72,7 @@ const Home: NextPage = (props: any) => {
                     component="img"
                     height="300"
                     image={
-                      newsitem.urlToImage ? newsitem.urlToImage : "/no.webp"
+                      newsitem.urlToImage	? newsitem.urlToImage : "https://tech-vave.vercel.app/no.webp"
                     }
                     alt="No image available"
                   />
