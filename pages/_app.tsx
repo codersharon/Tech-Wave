@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from '@vercel/analytics/react';
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Navbar from "./comps/navbar";
@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-      <Analytics />
+			<Analytics />
     </ThemeProvider>
   );
 }
