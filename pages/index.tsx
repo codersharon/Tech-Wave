@@ -45,7 +45,7 @@ const Home: NextPage = (props: any) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <Navbar />
+      {/* <Navbar /> */}
       <Box
         sx={{
           width: "100vw",

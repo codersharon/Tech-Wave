@@ -55,8 +55,8 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       sx={{
+        backdropFilter: "blur(4px)",
         position: "-webkit-sticky",
-        // position: 'sticky',
         top: 0,
         zIndex: 5,
       }}
