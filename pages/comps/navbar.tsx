@@ -58,7 +58,7 @@ function ResponsiveAppBar() {
         position: "-webkit-sticky",
         top: 0,
         zIndex: 5,
-        background: "white"
+        background: "#3e3a3a00"
       }}
       className="backdrop-blur-sm bg-white/30"
     >
