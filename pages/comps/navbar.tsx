@@ -55,11 +55,11 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       sx={{
-        backdropFilter: "blur(4px)",
         position: "-webkit-sticky",
         top: 0,
         zIndex: 5,
       }}
+      className="backdrop-blur-sm bg-white/30"
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -75,7 +75,6 @@ function ResponsiveAppBar() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
               textDecoration: "none",
             }}
           >
