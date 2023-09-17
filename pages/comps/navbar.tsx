@@ -14,22 +14,20 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { makeStyles } from "@mui/material";
+// import { makeStyles } from "@mui/material";
 
-const useStyles = makeStyles((theme :any) => ({
-  appBar: {
-    position: 'sticky',
-    top: 0,
-    zIndex: theme.zIndex.drawer + 1,
-  },
-}));
+// const useStyles = makeStyles((theme :any) => ({
+//   appBar: {
+//     background: 'white',
 
+//   },
+// }));
 
 const pages = ["tech-news", "how-to"];
 const settings = ["Admin Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
-  const classes = useStyles();
+  // const classes = useStyles;
   const router = useRouter();
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -55,7 +53,14 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar className={classes.appBar}>
+    <AppBar
+      sx={{
+        position: "-webkit-sticky",
+        // position: 'sticky',
+        top: 20,
+        zIndex: 5,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
