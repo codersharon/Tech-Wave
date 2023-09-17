@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" className="backdrop-blur-sm	sticy top-0">
+    <AppBar position="sticky" className="backdrop-blur-sm top-0 z-10">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
