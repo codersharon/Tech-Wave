@@ -11,7 +11,7 @@ const Footer = () => {
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
             <AdbIcon />
             <span className="font-bold ml-3 text-xl sm:text-lg cursor-default">
-              T e c h W a v e
+              T e c h V a v e
             </span>
           </a>
           <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
