@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import {
   Card,
@@ -14,25 +14,39 @@ import {
   CardContent,
   Typography,
   Box,
+	Tabs,
+	Tab
 } from "@mui/material";
 import Navbar from "./comps/navbar";
+import NewsItem from "./comps/newsitem";
 import Post from "./comps/post";
 import Footer from "./comps/footer";
+import Link from 'next/link'
 
 const Home: NextPage = (props: any) => {
   const [posts, setPosts] = useState(props.data.posts);
   const [news, setNews] = useState(props.news.articles);
+	const [ad_News, setAd_News] = useState(props.na.articles)
   const router = useRouter();
+	const [tabValue, setTabValue] = useState("post");
+	
+	const handleChange = () => {
+		if (tabValue == "post") {
+			setTabValue("news");
+		} else if (tabValue == "news") {
+			setTabValue("post");
+		}
+	}
   return (
     <>
       <NextSeo
-        title={"TechWave"}
+        title={"TechVave"}
         description="Online Tech guid, news, tech tricks and tips"
         canonical="https://tech-vave.vercel.app/"
       />
 
       <Head>
-        <title>TechWave</title>
+        <title>TechVave</title>
         <meta
           name="description"
           content="Online Tech guid, news, tech tricks and tips"
@@ -56,7 +70,7 @@ const Home: NextPage = (props: any) => {
           // justifyContent: "",
         }}
       >
-        {news.map((newsitem: any) => {
+        {ad_News.map((newsitem: any) => {
           return (
             <Card
               key={newsitem.title}
@@ -100,10 +114,22 @@ const Home: NextPage = (props: any) => {
         variant="h4"
         sx={{ m: 2.5, textAlign: { xs: "center", md: "start" } }}
       >
-        Latest Posts
+        Latest {tabValue}
       </Typography>
       <Box>
-        {posts.map((post: any) => {
+    <Box sx={{ width: '100%' }}>
+      <Tabs
+        value={tabValue}
+        onChange={handleChange}
+        textColor="secondary"
+        indicatorColor="secondary"
+        aria-label="secondary tabs example"
+      >
+        <Tab value="post" label="latest-post" />
+        <Tab value="news" label="tech-news" />
+      </Tabs>
+    </Box>
+				{tabValue == "post"? posts.map((post: any) => {
           return (
             <Post
               key={post._id}
@@ -114,7 +140,16 @@ const Home: NextPage = (props: any) => {
               date={post.date}
             />
           );
+        }):news.map((newsitem: any) => {
+          return (
+						<div key={newsitem.title} >
+							<NewsItem title={newsitem.title ? newsitem.title : "not title available"} img={newsitem.urlToImage ? newsitem.urlToImage : `/no.webp`} desc={newsitem.description ? newsitem.description : 'no description available'} url={newsitem.url} date={newsitem.publishedAt} auth={newsitem.author ? newsitem.author : 'author not available'} source={newsitem.source.name ? newsitem.source.name : newsitem.source.id} />
+						</div>
+          );
         })}
+				{tabValue == "news" ? <Link href="/tech-news">
+					<button className="bg-blue-600 hover:bg-blue-500 rounded p-2">More News</button>
+				</Link>: ""}
       </Box>
     </>
   );
@@ -125,14 +160,20 @@ export async function getServerSideProps(context: any) {
     method: "GET",
   });
   const data = await a.json();
-  let r = await axios(
+  let ra = await axios(
     "https://newsapi.org/v2/top-headlines?country=in&category=technology&language=en&apiKey=" +
       mySecret2 +
       `&page=1&pageSize=3`
   );
+  let na = await ra.data;
+  let r = await axios(
+    "https://newsapi.org/v2/top-headlines?country=in&category=technology&language=en&apiKey=" +
+      mySecret2 +
+      `&page=1&pageSize=10`
+  );
   let news = await r.data;
   return {
-    props: { data, news },
+    props: { data, news, na },
   };
 }
 

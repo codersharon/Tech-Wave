@@ -23,7 +23,7 @@ import { useRouter } from "next/router";
 //   },
 // }));
 
-const pages = ["tech-news", "how-to"];
+const pages = ["tech-news"];
 const settings = ["Admin Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
