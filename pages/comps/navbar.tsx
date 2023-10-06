@@ -53,15 +53,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar
-      sx={{
-        position: "-webkit-sticky",
-        top: 0,
-        zIndex: 5,
-        background: "#3e3a3a00"
-      }}
-      className="backdrop-blur-sm bg-white/30"
-    >
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
