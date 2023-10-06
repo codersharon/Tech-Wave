@@ -57,7 +57,6 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src="/black-and-white.svg" />
           <Typography
             variant="h6"
             noWrap
@@ -86,7 +85,7 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
+            {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -111,9 +110,10 @@ function ResponsiveAppBar() {
                   </MenuItem>
                 );
               })}
-            </Menu>
+            </Menu> */}
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <img src="/black-and-white.svg" />
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
