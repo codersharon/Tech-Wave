@@ -60,10 +60,11 @@ function ResponsiveAppBar() {
           <Box
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
             }}
           >
-            <img src="/black-and-white.svg" className="w-[48px]" />
+            <img src="/black-and-white.svg" className="w-[48px] mx-2" />
             <Typography
               variant="h6"
               noWrap
@@ -78,45 +79,6 @@ function ResponsiveAppBar() {
             >
               TechVave
             </Typography>
-          </Box>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            {/* <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            > */}
-            {/* <MenuIcon />
-            </IconButton> */}
-            {/* <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => {
-                return (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link href={`/${page}`}>{page}</Link>
-                  </MenuItem>
-                );
-              })}
-            </Menu> */}
           </Box>
           <Box
             sx={{
