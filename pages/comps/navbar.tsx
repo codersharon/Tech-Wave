@@ -24,7 +24,7 @@ import { useRouter } from "next/router";
 //   },
 // }));
 
-const pages = ["tech-news"];
+const pages = [""];
 const settings = ["Admin Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -57,22 +57,28 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
+          <Box
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              textDecoration: "none",
             }}
           >
-            TechVave
-          </Typography>
+            <img src="/black-and-white.svg" className="w-[48px]" />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                textDecoration: "none",
+              }}
+            >
+              TechVave
+            </Typography>
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             {/* <IconButton
@@ -83,7 +89,7 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             > */}
-              {/* <MenuIcon />
+            {/* <MenuIcon />
             </IconButton> */}
             {/* <Menu
               id="menu-appbar"
@@ -112,26 +118,31 @@ function ResponsiveAppBar() {
               })}
             </Menu> */}
           </Box>
-          <img src="/black-and-white.svg" className="w-[48px]" />
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
+          <Box
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
             }}
           >
-            TechVave
-          </Typography>
+            <img src="/black-and-white.svg" className="w-[48px]" />
+            {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              TechVave
+            </Typography>
+          </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Link key={page} href={`/${page}`}>
