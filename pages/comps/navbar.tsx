@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
           <Box
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "none", md: "flex" },
               flexGrow: 1,
             }}
           >
