@@ -75,16 +75,16 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
+            > */}
+              {/* <MenuIcon />
+            </IconButton> */}
             {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
               })}
             </Menu> */}
           </Box>
-          <img src="/black-and-white.svg" />
+          <img src="/black-and-white.svg" className="w-1/3" />
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
