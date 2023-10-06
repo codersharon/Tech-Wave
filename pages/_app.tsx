@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
 
-      <Navbar />
+      {/* <Navbar /> */}
       <Component {...pageProps} />
       <Footer />
 			<Analytics />
