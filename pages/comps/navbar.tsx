@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
               })}
             </Menu> */}
           </Box>
-          <img src="/black-and-white.svg" className="w-1/3" />
+          <img src="/black-and-white.svg" className="w-[48px]" />
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
