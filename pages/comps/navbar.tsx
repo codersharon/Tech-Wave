@@ -155,9 +155,13 @@ const ResponsiveAppBar = () => {
           <li>Business</li>
         </ul>
         <ul>
-          <img src="/black-and-white.svg" alt="" />
+          <img src="/black-and-white.svg" alt="Logo" />
         </ul>
-        <ul></ul>
+        <ul>
+          <li>Register</li>
+          <li>Join-Us</li>
+          <li>Login</li>
+        </ul>
       </nav>
     </>
   );
