@@ -13,7 +13,6 @@
 /* Rectangle 1 */
 
 .box1 {
-  position: absolute;
   width: 100%;
   height: 144px;
   display: flex;
@@ -24,11 +23,10 @@
 
 /* How-To */
 .howto {
-  position: absolute;
   width: 160px;
   height: 23px;
-  left: 106px;
-  top: 57px;
+  margin-left: 5%;
+  margin-right: 5%;
 
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -42,21 +40,25 @@
 
 /* black-and-white 1 */
 .logo {
-  position: absolute;
+  /* position: absolute; */
   width: 214.91px;
   height: 145px;
-  left: 574.62px;
-  top: 0px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* left: 574.62px;
+  top: 0px; */
 }
 
 /* Tech */
 
 .technews {
-  position: absolute;
+  /* position: absolute; */
   width: 143px;
   height: 23px;
-  left: 266px;
-  top: 57px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* left: 266px;
+  top: 57px; */
 
   font-family: "Inter";
   font-style: normal;
@@ -70,11 +72,13 @@
 
 /* Business */
 .business {
-  position: absolute;
+  /* position: absolute; */
   width: 166px;
   height: 23px;
-  left: 409px;
-  top: 56px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* left: 409px;
+  top: 56px; */
 
   font-family: "Inter";
   font-style: normal;
@@ -88,11 +92,13 @@
 
 /* Join-us */
 .joinus {
-  position: absolute;
+  /* position: absolute; */
   width: 249.39px;
   height: 23px;
-  left: 1015.93px;
-  top: 57px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* left: 1015.93px;
+  top: 57px; */
 
   font-family: "Inter";
   font-style: normal;
@@ -106,11 +112,13 @@
 
 /* Register */
 .register {
-  position: absolute;
+  /* position: absolute; */
   width: 191px;
   height: 23px;
-  left: 824px;
-  top: 57px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* left: 824px;
+  top: 57px; */
 
   font-family: "Inter";
   font-style: normal;
@@ -124,11 +132,13 @@
 
 /* Login */
 .login {
-  position: absolute;
+  /* position: absolute; */
   width: 174.68px;
   height: 23px;
-  left: 1265.32px;
-  top: 57px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* left: 1265.32px;
+  top: 57px; */
 
   font-family: "Inter";
   font-style: normal;
