@@ -149,7 +149,7 @@ const ResponsiveAppBar = () => {
   return (
     <>
       <nav className="flex items-center justify-center">
-        <ul>
+        <ul className="flex items-center justify-end">
           <li>How-to</li>
           <li>Tech-news</li>
           <li>Business</li>
@@ -157,7 +157,7 @@ const ResponsiveAppBar = () => {
         <ul>
           <img src="/black-and-white.svg" alt="Logo" />
         </ul>
-        <ul>
+        <ul className="flex items-center justify-start">
           <li>Register</li>
           <li>Join-Us</li>
           <li>Login</li>
