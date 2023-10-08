@@ -1,3 +1,4 @@
+import styles from "../../styles/navbar.module.css"
 import SvgIcon from "@mui/material/SvgIcon";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
@@ -148,20 +149,16 @@ const settings = ["Admin Dashboard", "Logout"];
 const ResponsiveAppBar = () => {
   return (
     <>
-      <nav className="flex items-center justify-center">
-        <ul className="flex items-center justify-end">
-          <li>How-to</li>
-          <li>Tech-news</li>
-          <li>Business</li>
-        </ul>
-        <ul>
-          <img src="/black-and-white.svg" alt="Logo" />
-        </ul>
-        <ul className="flex items-center justify-start">
-          <li>Register</li>
-          <li>Join-Us</li>
-          <li>Login</li>
-        </ul>
+      <nav className={styles.nav}>
+        <div className={styles.box1}>
+          <li className={styles.howto}>How-to</li>
+          <li className={styles.technews}>Tech-news</li>
+          <li className={styles.business}>Business</li>
+          <img src="/black-and-white.svg" className={styles.logo} alt="Logo" />
+          <li className={styles.register}>Register</li>
+          <li className={styles.joinus}>Join-Us</li>
+          <li className={styles.login}>Login</li>
+        </div>
       </nav>
     </>
   );

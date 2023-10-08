@@ -1,0 +1,138 @@
+/* Navbar */
+.nav {
+  position: absolute;
+  width: 1440px;
+  height: 145px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Rectangle 1 */
+
+.box1 {
+  position: absolute;
+  width: 1440px;
+  height: 144px;
+  left: 0px;
+  top: 1px;
+
+  background: #000000;
+}
+
+/* How-To */
+.howto {
+  position: absolute;
+  width: 160px;
+  height: 23px;
+  left: 106px;
+  top: 57px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* black-and-white 1 */
+.logo {
+  position: absolute;
+  width: 214.91px;
+  height: 145px;
+  left: 574.62px;
+  top: 0px;
+}
+
+/* Tech */
+
+.technews {
+  position: absolute;
+  width: 143px;
+  height: 23px;
+  left: 266px;
+  top: 57px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Business */
+.business {
+  position: absolute;
+  width: 166px;
+  height: 23px;
+  left: 409px;
+  top: 56px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Join-us */
+.joinus {
+  position: absolute;
+  width: 249.39px;
+  height: 23px;
+  left: 1015.93px;
+  top: 57px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Register */
+.register {
+  position: absolute;
+  width: 191px;
+  height: 23px;
+  left: 824px;
+  top: 57px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Login */
+.login {
+  position: absolute;
+  width: 174.68px;
+  height: 23px;
+  left: 1265.32px;
+  top: 57px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
