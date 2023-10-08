@@ -148,7 +148,7 @@ const settings = ["Admin Dashboard", "Logout"];
 const ResponsiveAppBar = () => {
   return (
     <>
-      <nav>
+      <nav className="flex items-center justify-center">
         <ul>
           <li>How-to</li>
           <li>Tech-news</li>
