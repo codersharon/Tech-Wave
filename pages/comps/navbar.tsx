@@ -27,140 +27,120 @@ import { useRouter } from "next/router";
 const pages = [""];
 const settings = ["Admin Dashboard", "Logout"];
 
-// function ResponsiveAppBar() {
-//   // const classes = useStyles;
-//   const router = useRouter();
+function ResponsiveAppBar() {
+  // const classes = useStyles;
+  const router = useRouter();
 
-//   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-//     null
-//   );
-//   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-//     null
-//   );
-
-//   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-//     setAnchorElNav(event.currentTarget);
-//   };
-//   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-//     setAnchorElUser(event.currentTarget);
-//   };
-
-//   const handleCloseNavMenu = () => {
-//     setAnchorElNav(null);
-//   };
-
-//   const handleCloseUserMenu = () => {
-//     setAnchorElUser(null);
-//   };
-
-//   return (
-//     <AppBar position="static">
-//       <Container maxWidth="xl">
-//         <Toolbar disableGutters>
-//           <Box
-//             sx={{
-//               mr: 2,
-//               display: { xs: "none", md: "flex" },
-//               flexGrow: 1,
-//             }}
-//           >
-//             <img src="/black-and-white.svg" className="w-[48px] mx-2" />
-//             <Typography
-//               variant="h6"
-//               noWrap
-//               component="a"
-//               href="/"
-//               sx={{
-//                 fontFamily: "monospace",
-//                 fontWeight: 700,
-//                 letterSpacing: ".3rem",
-//                 textDecoration: "none",
-//               }}
-//             >
-//               TechVave
-//             </Typography>
-//           </Box>
-//           <Box
-//             sx={{
-//               mr: 2,
-//               display: { xs: "flex", md: "none" },
-//               flexGrow: 1,
-//             }}
-//           >
-//             <img src="/black-and-white.svg" className="w-[48px]" />
-//             {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-//             <Typography
-//               variant="h5"
-//               noWrap
-//               component="a"
-//               href="/"
-//               sx={{
-//                 fontFamily: "monospace",
-//                 fontWeight: 700,
-//                 letterSpacing: ".3rem",
-//                 color: "inherit",
-//                 textDecoration: "none",
-//               }}
-//             >
-//               TechVave
-//             </Typography>
-//           </Box>
-//           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-//             {pages.map((page) => (
-//               <Link key={page} href={`/${page}`}>
-//                 <Button
-//                   onClick={handleCloseNavMenu}
-//                   sx={{ my: 2, color: "white", display: "block" }}
-//                 >
-//                   {page}
-//                 </Button>
-//               </Link>
-//             ))}
-//           </Box>
-
-//           <Box sx={{ flexGrow: 0 }}>
-//             <Tooltip title="Open settings">
-//               <Link href={`/admin/admin`}>
-//                 <IconButton sx={{ p: 0 }}>
-//                   <Typography
-//                     textAlign={"center"}
-//                     sx={{
-//                       borderRadius: "24px",
-//                       fontWeight: "bold",
-//                       bgcolor: "gray",
-//                       paddingY: 1,
-//                       paddingX: 2,
-//                     }}
-//                   >
-//                     A
-//                   </Typography>
-//                 </IconButton>
-//               </Link>
-//             </Tooltip>
-//           </Box>
-//         </Toolbar>
-//       </Container>
-//     </AppBar>
-//   );
-// }
-// export default ResponsiveAppBar;
-
-const ResponsiveAppBar = () => {
-  return (
-    <>
-      <nav>
-        <ul>
-          <li>How-to</li>
-          <li>Tech-news</li>
-          <li>Business</li>
-        </ul>
-        <ul>
-          <img src="./black-and-white.svg" alt="" />
-        </ul>
-        <ul></ul>
-      </nav>
-    </>
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
   );
-};
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+    null
+  );
 
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  return (
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Box
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              flexGrow: 1,
+            }}
+          >
+            <img src="/black-and-white.svg" className="w-[48px] mx-2" />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                textDecoration: "none",
+              }}
+            >
+              TechVave
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+            }}
+          >
+            <img src="/black-and-white.svg" className="w-[48px]" />
+            {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              TechVave
+            </Typography>
+          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Link key={page} href={`/${page}`}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page}
+                </Button>
+              </Link>
+            ))}
+          </Box>
+
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open settings">
+              <Link href={`/admin/admin`}>
+                <IconButton sx={{ p: 0 }}>
+                  <Typography
+                    textAlign={"center"}
+                    sx={{
+                      borderRadius: "24px",
+                      fontWeight: "bold",
+                      bgcolor: "gray",
+                      paddingY: 1,
+                      paddingX: 2,
+                    }}
+                  >
+                    A
+                  </Typography>
+                </IconButton>
+              </Link>
+            </Tooltip>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+}
 export default ResponsiveAppBar;
