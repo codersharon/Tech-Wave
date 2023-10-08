@@ -56,11 +56,17 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{
+							display: 'flex', 
+							alignItems: "center",
+							justifyContent: "center",
+		}}>
           <Box
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
+							alignItems: "center",
+							justifyContent: "center",
               flexGrow: 1,
             }}
           >
@@ -84,6 +90,8 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
+							alignItems: "center",
+							justifyContent: "center",
               flexGrow: 1,
             }}
           >
@@ -116,27 +124,6 @@ function ResponsiveAppBar() {
                 </Button>
               </Link>
             ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <Link href={`/admin/admin`}>
-                <IconButton sx={{ p: 0 }}>
-                  <Typography
-                    textAlign={"center"}
-                    sx={{
-                      borderRadius: "24px",
-                      fontWeight: "bold",
-                      bgcolor: "gray",
-                      paddingY: 1,
-                      paddingX: 2,
-                    }}
-                  >
-                    A
-                  </Typography>
-                </IconButton>
-              </Link>
-            </Tooltip>
           </Box>
         </Toolbar>
       </Container>
