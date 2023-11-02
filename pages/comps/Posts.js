@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post";
+import { useState } from "react";
 
 function Posts() {
   const [post, setPost] = useState(props.data.posts);

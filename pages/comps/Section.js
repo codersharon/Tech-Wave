@@ -4,7 +4,7 @@ import { useState } from "react";
 import Sidecard from "./Sidecard";
 import NewsItem from "./NewsItem";
 
-function Section() {
+function Section(props) {
   const [articles, setArticles] = useState(props.data.articles);
   const [page, setPage] = useState(1);
 

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const NewsItem = (props) => {
   const [img, setImg] = useState(props.img);
   const [desc, setDesc] = useState(props.desc);
