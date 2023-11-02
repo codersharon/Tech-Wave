@@ -2,8 +2,8 @@ import React from "react";
 import Post from "./Post";
 import { useState } from "react";
 
-function Posts() {
-  const [post, setPost] = useState(props.data.posts);
+function Posts(props) {
+  const [post, setPost] = useState(props.data.posts ? props.data.props : {});
 
   return (
     <div className="text-white w-full flex items-center justify-between">
