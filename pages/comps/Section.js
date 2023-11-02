@@ -1,4 +1,5 @@
 import React from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 import { useState } from "react";
 import Sidecard from "./Sidecard";
 import NewsItem from "./NewsItem";
