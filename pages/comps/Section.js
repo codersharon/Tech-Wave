@@ -6,7 +6,7 @@ import NewsItem from "./NewsItem";
 
 function Section(props) {
   const [articles, setArticles] = useState(
-    props.data.articles ? props.data.articles : []
+    props ? props.data.articles : []
   );
   const [page, setPage] = useState(1);
 

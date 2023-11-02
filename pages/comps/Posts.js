@@ -3,7 +3,7 @@ import Post from "./Post";
 import { useState } from "react";
 
 function Posts(props) {
-  const [post, setPost] = useState(props.data.posts ? props.data.props : {});
+  const [post, setPost] = useState(props ? props.data.props : {});
 
   return (
     <div className="text-white w-full flex items-center justify-between">
