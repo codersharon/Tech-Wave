@@ -2,7 +2,7 @@ import React from "react";
 import Post from "./Post";
 import { useState } from "react";
 
-function Posts(props) {
+const Posts = (props) => {
   const [post, setPost] = useState(props ? props.data.props : {});
 
   return (
@@ -19,7 +19,7 @@ function Posts(props) {
       </div>
     </div>
   );
-}
+};
 
 export async function getServerSideProps(context) {
   const a = await fetch("https://tech-vave.vercel.app/api/post", {

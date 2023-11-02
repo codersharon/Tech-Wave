@@ -4,7 +4,7 @@ import { useState } from "react";
 import Sidecard from "./Sidecard";
 import NewsItem from "./NewsItem";
 
-function Section(props) {
+const Section = (props) => {
   const [articles, setArticles] = useState(
     props ? props.data.articles : []
   );
