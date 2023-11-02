@@ -1,14 +1,13 @@
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Navbar from "./comps/navbar";
+import { AppProps } from "next/app";
+import Navbar from "./comps/Navbar";
 import LoadingBar from "react-top-loading-bar";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Footer from "./comps/footer";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   const [progress, setProgress] = useState(0);
   const router = useRouter();
 
@@ -35,7 +34,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Navbar />
       <Component {...pageProps} />
-      <Footer />
       <Analytics />
     </>
   );
