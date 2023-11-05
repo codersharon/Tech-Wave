@@ -2,15 +2,23 @@ import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 
-async function Sidecard(props) {
+function Sidecard(props) {
   const [genre, setGenre] = useState(props ? props.id : "entertainment");
-  let r = await fetch(`https://tech-vave.vercel.app/api/news?page=1`, {
-    method: "POST",
-    body: JSON.stringify({
-      category: genre,
-    }),
-  });
-  let data = await r.json();
+  const [news, setNews] = useState({});
+  const getTheNews = async () => {
+    let r = await fetch(`https://tech-vave.vercel.app/api/news?page=1`, {
+      method: "POST",
+      body: JSON.stringify({
+        category: genre,
+      }),
+    });
+    let data = await r.json();
+    setNews(data);
+  };
+  useEffect(() => {
+    getTheNews();
+  }, [0]);
+
   return (
     <div className="bg-[#AE574B] p-4 text-black w-full md:w-[36%] mx-0 my-10 md:mx-10 lg:w-[30%]">
       <Link href={"/"}>
