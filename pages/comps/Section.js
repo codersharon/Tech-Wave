@@ -5,9 +5,7 @@ import Sidecard from "./Sidecard";
 import NewsItem from "./NewsItem";
 
 const Section = (props) => {
-  const [articles, setArticles] = useState(
-    props ? props.data.articles : []
-  );
+  const [articles, setArticles] = useState(props ? props.data.articles : []);
   const [page, setPage] = useState(1);
 
   const getMore = async () => {
@@ -58,14 +56,12 @@ const Section = (props) => {
       <Sidecard id={"technology"} />
     </div>
   );
-}
+};
 
 export async function getServerSideProps(context) {
   let r = await fetch(`https://tech-vave.vercel.app/api/news?page=1`, {
     method: "POST",
-    body: {
-      category: "tech"
-    }
+    body: '{"category": "tech"}',
   });
   let data = await r.json();
   return {
