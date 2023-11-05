@@ -15,7 +15,7 @@ async function TechNews(req, res) {
   });
   if (req.method == "POST") {
     let page = req.query.page;
-    let category = req.query.category;
+    let category = req.body.category;
     let r = await axios(
       `https://newsapi.org/v2/top-headlines?country=in&category=${category}&language=en&apiKey=` +
         mySecret +

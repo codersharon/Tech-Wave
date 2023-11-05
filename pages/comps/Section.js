@@ -63,6 +63,9 @@ const Section = (props) => {
 export async function getServerSideProps(context) {
   let r = await fetch(`https://tech-vave.vercel.app/api/news?page=1`, {
     method: "POST",
+    body: {
+      category: "tech"
+    }
   });
   let data = await r.json();
   return {
