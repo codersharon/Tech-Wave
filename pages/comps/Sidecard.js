@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Sidecard(props) {
   const [genre, setGenre] = useState(props ? props.id : "entertainment");
