@@ -27,7 +27,7 @@ function Sidecard(props) {
         </h2>
         <img src="/GPixel-8pro.jpeg" alt="" className="w-full" />
         <h2 className="font-im-fell-great-primer font-bold text-[24px] mt-[-18px] text-[#272727]">
-          {data.title}
+          {news.title}
         </h2>
       </Link>
     </div>
