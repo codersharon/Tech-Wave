@@ -3,19 +3,23 @@ import Post from "./Post";
 import { useState } from "react";
 
 const Posts = (props) => {
-  const [post, setPost] = useState(props ? props.data.props : "");
+  const [posts, setPosts] = useState(props ? props.data.posts : "");
 
   return (
     <div className="text-white w-full flex items-center justify-between">
       <div className="flex flex-col items-start justify-center">
-        <Post
-          key={post._id}
-          id={post._id}
-          title={post.title}
-          desc={post.content ? post.content : "no description available"}
-          image={post.image ? post.image : "/no.webp"}
-          date={post.date}
-        />
+        {posts.map((post) => {
+          return (
+            <Post
+              key={post._id}
+              id={post._id}
+              title={post.title}
+              desc={post.content ? post.content : "no description available"}
+              image={post.image ? post.image : "/no.webp"}
+              date={post.date}
+            />
+          );
+        })}
       </div>
     </div>
   );
