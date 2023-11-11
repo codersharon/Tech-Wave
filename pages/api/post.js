@@ -17,7 +17,7 @@ async function handler(req, res) {
    await NextCors(req, res, {
       // Options
       methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-      origin: ['http://localhost:3000/', 'https://tech-vave.vercel.app/'],
+      origin: ['http://localhost:3000/', 'https://tech-vave.vercel.app/', 'https://techvave.sharonsandeep.repl.co/'],
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
    });
 	if (req.method == "DELETE") {

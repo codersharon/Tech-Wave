@@ -31,7 +31,7 @@ const Posts = (props) => {
 };
 
 export async function getServerSideProps(context) {
-	const url = 'https://techvave.sharonsandeep.repl.co/api/post';
+	const url = 'https://tech-vave.vercel.app/api/post';
 
 	const response = await fetch(url);
 
