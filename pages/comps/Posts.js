@@ -3,10 +3,10 @@ import Post from "./Post";
 import { useState, useEffect } from "react";
 
 const Posts = (props) => {
+		console.log(props) 
   // const [posts, setPosts] = useState(props? props.data.posts : []);
 	// useEffect(() => {
 	// if (props !== undefined) {
-	// 	console.log(props.data) 
 	// }
 	// 	setPosts({props? props.posts : []})
 	// }, [0])
@@ -31,7 +31,7 @@ const Posts = (props) => {
 };
 
 export async function getServerSideProps(context) {
-	const url = 'https://tech-vave.vercel.app/api/post';
+	const url = 'https://techvave.sharonsandeep.repl.co/api/post';
 
 	const response = await fetch(url);
 
@@ -39,7 +39,7 @@ export async function getServerSideProps(context) {
 
 	console.log(data);
   return {
-    props: {data},
+    props: data,
   };
 }
 
